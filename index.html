@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator AsmrProg</title>
+   
+</head>
+<body>
+    <script type="text/javascript">
+
+       
+
+        function addvalue(key)
+	{
+		var inp=document.getElementById("inbox");
+		inp.innerHTML=inp.innerHTML+key;
+	}
+	function calc()
+	{
+		var str=document.getElementById("inbox").innerHTML;
+		document.getElementById("inbox").innerHTML=eval(str);
+	}
+    function clear1(){
+        document.getElementById("inbox").innerHTML = "";
+       }  
+    
+    
+
+    </script>
+    <div class="wrapper">
+        <section class="screen" id="inbox">
+            
+        </section>
+        <section class="calc-buttons">
+            <div class="calc-button-row">
+                <button class="calc-button double" onclick="clear1()">
+                    C
+                </button>
+                <button class="calc-button">
+                    &larr;
+                </button>
+                <button class="calc-button" onclick="addvalue('/')">
+                    &divide;
+                </button>
+
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button" onclick="addvalue('7')">
+                    7
+                </button>
+                <button class="calc-button" onclick="addvalue('8')">
+                    8
+                </button>
+                <button class="calc-button" onclick="addvalue('9')">
+                    9
+                </button>
+                <button class="calc-button" onclick="addvalue('*')">
+                    &times;
+                </button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button" onclick="addvalue('4')">
+                    4
+                </button>
+                <button class="calc-button" onclick="addvalue('5')">
+                    5
+                </button>
+                <button class="calc-button" onclick="addvalue('6')">
+                    6
+                </button>
+                <button class="calc-button" onclick="addvalue('-')">
+                    &minus;
+                </button>
+            </div>
+
+
+            <div class="calc-button-row">
+                <button class="calc-button" onclick="addvalue('1')">
+                    1
+                </button>
+                <button class="calc-button" onclick="addvalue('2')">
+                    2
+                </button>
+                <button class="calc-button" onclick="addvalue('3')">
+                    3
+                </button>
+                <button class="calc-button" onclick="addvalue('+')">
+                    &plus;
+                </button>
+            </div>
+
+            <div class="calc-button-row">
+                <button class="calc-button triple" onclick="addvalue('0')">
+                    0
+                </button>
+                <button class="calc-button" onclick="calc()">
+                    &equals;
+                </button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
